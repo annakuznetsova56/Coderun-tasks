@@ -1,0 +1,166 @@
+<style>
+    body {
+        display: flex;
+        width: 1000px;
+        height: 1000px;
+        background-color: #ffffff;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .container {
+        position: relative;
+        width: 1000px;
+        height: 1000px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .flag {
+        position: absolute;
+        width: 60px;
+        height: 40px;
+        background-color: #ff0000;
+        left: 320px; 
+        top: 110px;
+        
+        clip-path: polygon(
+            0px 20px,
+            60px 0px,
+            60px 40px
+        );
+    }
+    
+    .flag-stick {
+        position: absolute;
+        width: 5px;
+        height: 320px;
+        background-color: #999999;
+        left: 380px; 
+        top: 105px;
+    }
+    
+    .camera-top {
+        position: absolute;
+        width: 55px;
+        height: 8px;
+        background-color: #000000;
+        left: 355px;
+        top: 425px;
+        border-radius: 5px 5px 0 0;
+    }
+    
+    .camera-body {
+        position: absolute;
+        width: 55px;
+        height: 32px;
+        background-color: #666666;
+        left: 355px;
+        top: 433px;
+    }
+    
+    .camera-bottom {
+        position: absolute;
+        width: 100px;
+        height: 55px;
+        background-color: #000000;
+        left: 320px;
+        top: 465px;
+        
+        clip-path: polygon(
+            20px 0px,
+            95px 0px,
+            95px 55px,
+            0px 55px
+        );
+    }
+
+    .trolley {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 520px;
+        left: 245px;
+        align-items: center;
+    }
+    
+    .top {
+        width: 530px;
+        height: 50px;
+        background-color: #d8d8d8;
+        border-radius: 60px 250px 0 0 / 50px 50px 0 0;
+    }
+    
+    .top-light {
+        width: 540px;
+        height: 15px;
+        background-color: #ff0000;
+        border-radius: 10px;
+    }
+    
+    .main-body {
+        width: 520px;
+        height: 130px;
+        background-color: #f45a3b;
+        border-radius: 0 0 25px 25px;
+    }
+    
+    .bottom {
+        width: 490px;
+        height: 110px;
+        background-color: #222222;
+        
+        clip-path: polygon(
+            0px 10px,
+            10px 0px,
+            480px 0px,
+            490px 10px,
+            490px 40px,
+            420px 110px,
+            70px 110px,
+            0px 40px
+        );
+    }
+    
+    .wheels {
+        display: flex;
+        flex-direction: row;
+        width: 480px;
+        justify-content: space-between;
+        margin-top: -70px;
+        margin-left: 10px;
+        z-index: 2;
+    }
+    
+    .wheel {
+        width: 130px;
+        height: 130px;
+        background-color: #000000;
+        border-radius: 50%;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="flag"></div>
+        <div class="flag-stick"></div>
+        <div class="camera-top"></div>
+        <div class="camera-body"></div>
+        <div class="camera-bottom"></div>
+
+        <div class="trolley">
+            <div class="top"></div>
+            <div class="top-light"></div>
+            <div class="main-body"></div> 
+            <div class="bottom"></div>
+            
+            <div class="wheels">
+                <div class="wheel"></div>
+                <div class="wheel"></div>
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </div>
+</body>
